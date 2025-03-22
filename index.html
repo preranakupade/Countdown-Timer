@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizable Countdown Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="eventTitle">Countdown Timer</h1>
+
+   
+        <div class="date-controls">
+            <label>Event Title: <input type="text" id="eventTitleInput" placeholder="Enter event title..."></label>
+            <label>Start Date: <input type="datetime-local" id="startDate"></label>
+            <label>End Date: <input type="datetime-local" id="endDate"></label>
+            <button id="startCountdown">Start Timer</button>
+            <button id="resetCountdown">Reset Timer</button>
+
+        </div>
+
+        
+        <div class="timer">
+            <div class="time-box" id="days">00<span>Days</span></div>
+            <div class="time-box" id="hours">00<span>Hours</span></div>
+            <div class="time-box" id="minutes">00<span>Minutes</span></div>
+            <div class="time-box" id="seconds">00<span>Seconds</span></div>
+            <div class="time-box" id="milliseconds">000<span>Milliseconds</span></div>
+        </div>
+
+       
+        <div class="custom-controls">
+            <label>Background Color: <input type="color" id="bgColorPicker"></label>
+            <label>Text Color: <input type="color" id="textColorPicker"></label>
+            <label>Font Size: <input type="number" id="fontSizePicker" min="10" max="40" value="24"></label>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

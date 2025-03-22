@@ -1,0 +1,187 @@
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #fffbfb;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    transition: background 0.5s ease;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1s ease-in-out;
+}
+
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.timer {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.time-box {
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    font-size: 24px;
+    font-weight: bold;
+    min-width: 70px;
+    text-align: center;
+}
+
+.time-box:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.time-box span {
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+/* Date Controls */
+.date-controls {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.date-controls label {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.date-controls input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.date-controls input:focus {
+    transform: scale(1.05);
+}
+
+.date-controls button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background: #333;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 16px;
+}
+
+#resetCountdown {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background: #ff4d4d;
+    color: rgb(2, 1, 1);
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#resetCountdown:hover {
+    background: #cc0000;
+}
+
+
+.date-controls button:hover {
+    background: #555;
+}
+
+
+
+.custom-controls {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.custom-controls label {
+    margin-bottom: 5px;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .time-box {
+        font-size: 20px;
+        min-width: 60px;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .time-box {
+        font-size: 18px;
+        min-width: 50px;
+        padding: 8px;
+    }
+}
